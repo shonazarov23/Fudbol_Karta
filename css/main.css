@@ -111,3 +111,28 @@ body {
     background-color: #0056b3;
   }
   
+  .save-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #d4af37; /* Oltin rang */
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #bfa32e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+
+.save-btn{
+  width: 100%;
+  background-color: #e6be1f;
+}
+

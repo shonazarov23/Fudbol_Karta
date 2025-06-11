@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIFA Kartangiz</title>
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +29,7 @@
         <!-- Rasm va logo -->
         <img id="logoImage" class="logo-img" src="img/chelsea.png">
         <img id="playerImage" class="player-img" src="img/photo_2025-06-11_11-23-22.png">
+        <button class="save-btn" onclick="saveCard()">Kartani rasm sifatida saqlash</button>
       </div>
     </div>
 
@@ -100,6 +102,16 @@
     function selectLogo(imagePath) {
       document.getElementById('logoImage').src = imagePath;
     }
+    function saveCard() {
+    const cardElement = document.querySelector('.card');
+
+    html2canvas(cardElement).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'fifa-karta.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  }
   </script>
 </body>
 
