@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFA Kartangiz</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card-section">
+      <div class="card">
+        <img src="img/sariq.jpg" class="base" alt="Karta">
+
+        <!-- Statlar -->
+        <h1 id="rating" class="rating">00</h1>
+        <h1 id="position" class="position">RW</h1>
+        <h1 id="name" class="name">FAMILYA</h1>
+        <h1 id="pac" class="stat pac">00</h1>
+        <h1 id="sho" class="stat sho">00</h1>
+        <h1 id="pas" class="stat pas">00</h1>
+        <h1 id="dri" class="stat dri">00</h1>
+        <h1 id="def" class="stat def">00</h1>
+        <h1 id="phy" class="stat phy">00</h1>
+
+        <!-- Rasm va logo -->
+        <img id="logoImage" class="logo-img" src="img/chelsea.png">
+        <img id="playerImage" class="player-img" src="img/photo_2025-06-11_11-23-22.png">
+      </div>
+    </div>
+
+    <div class="input-section">
+      <p>Jami Ochkoinggiz</p>
+      <input type="text" placeholder="0-99" id="ratingInput">
+
+      <p>Joylashuvinggiz</p>
+      <input type="text" placeholder="Masalan: RW" id="positionInput">
+
+      <p>Komandanggiz logosi</p>
+      <select onchange="selectLogo(this.value)">
+        <option value="">Tanlang</option>
+        <option value="img/Barsa.png">Barcelona</option>
+        <option value="img/real.png">Real Madrid</option>
+        <option value="img/chelsea.png">Chelsea</option>
+        <option value="img/mancity.png">Man City</option>
+        <option value="img/liverpool.png">Liverpool</option>
+        <option value="img/Manunited.png">Man United</option>
+      </select>
+
+      <p>Rasm</p>
+      <input type="file" accept="image/*" onchange="loadImage(event, 'playerImage')">
+
+      <p>Familyangiz</p>
+      <input type="text" id="nameInput" placeholder="Familya">
+
+      <h1>0-99 Kiriting</h1>
+      <p>PAC</p>
+      <input type="text" id="pacInput" placeholder="PAC Kiriting">
+      <p>SHO</p>
+      <input type="text" id="shoInput" placeholder="SHO Kiriting">
+      <p>PAS</p>
+      <input type="text" id="pasInput" placeholder="PAS Kiriting">
+      <p>DRI</p>
+      <input type="text" id="driInput" placeholder="DRI Kiriting">
+      <p>DEF</p>
+      <input type="text" id="defInput" placeholder="DEF Kiriting">
+      <p>PHY</p>
+      <input type="text" id="phyInput" placeholder="PHY Kiriting">
+
+      <button onclick="updateCard()">Kartani yasash</button>
+    </div>
+  </div>
+
+  <script>
+    function updateCard() {
+      document.getElementById('rating').innerText = document.getElementById('ratingInput').value || '00';
+      document.getElementById('position').innerText = document.getElementById('positionInput').value || 'RW';
+      document.getElementById('name').innerText = document.getElementById('nameInput').value || 'FAMILYA';
+      document.getElementById('pac').innerText = document.getElementById('pacInput').value || '00';
+      document.getElementById('sho').innerText = document.getElementById('shoInput').value || '00';
+      document.getElementById('pas').innerText = document.getElementById('pasInput').value || '00';
+      document.getElementById('dri').innerText = document.getElementById('driInput').value || '00';
+      document.getElementById('def').innerText = document.getElementById('defInput').value || '00';
+      document.getElementById('phy').innerText = document.getElementById('phyInput').value || '00';
+    }
+
+    function loadImage(event, targetId) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById(targetId).src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function selectLogo(imagePath) {
+      document.getElementById('logoImage').src = imagePath;
+    }
+  </script>
+</body>
+
+</html>

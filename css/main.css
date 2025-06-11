@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-section {
+    position: relative;
+  }
+  
+  .card {
+    width: 430px;
+    position: relative;
+  }
+  
+  .card img.base {
+    width: 100%;
+  }
+  
+  .logo-img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .player-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .rating {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    font-size: 50px;
+    color: black;
+  }
+  
+  .position {
+    position: absolute;
+    top: 75px;
+    left: 120px;
+    font-size: 18px;
+  }
+  
+  .name {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 90px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(59, 59, 59);
+  }
+  
+  .stat {
+    position: absolute;
+    font-size: 28px;
+    color: rgb(51, 49, 49);
+}
+  
+  .rating { top: 70px; left: 109px; }
+  .position{ top: 150px; left: 120px; }
+  .name { top: 295px;}
+  .pac { top: 337px; left: 120px; }
+  .sho { top: 368px; left: 120px; }
+  .pas { top: 402px; left: 120px; }
+  .dri { top: 337px; left: 250px; }
+  .def { top: 368px; left: 250px; }
+  .phy { top: 402px; left: 250px; }
+  .logo-img { top: 245px; left: 120px; }
+  .player-img { top: 101px; left: 153px; }
+  
+  .input-section {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input-section input,
+  .input-section select,
+  .input-section button {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .input-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .input-section button:hover {
+    background-color: #0056b3;
+  }
+  
