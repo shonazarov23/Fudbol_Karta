@@ -32,8 +32,8 @@ body {
   
   .player-img {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
   }
   
@@ -79,7 +79,7 @@ body {
   .def { top: 368px; left: 250px; }
   .phy { top: 402px; left: 250px; }
   .logo-img { top: 245px; left: 120px; }
-  .player-img { top: 101px; left: 153px; }
+  .player-img { top: 141px; left: 193px; }
   
   .input-section {
     width: 100%;
